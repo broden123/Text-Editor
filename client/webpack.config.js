@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = () => {
   return {
@@ -21,7 +22,7 @@ module.exports = () => {
       }),
       new MiniCssExtractPlugin(),
       new InjectManifest({
-        swSrc: "./src/src-sw.js",
+        swSrc: "./src-sw.js",
         swDest: "service-worker.js",
       }),
       new WebpackPwaManifest({
