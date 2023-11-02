@@ -32,7 +32,7 @@
     }
   ],
   "name": "Text Editor",
-  "short_name": "TextEdit",
+  "short_name": "J.A.T.E.",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./",

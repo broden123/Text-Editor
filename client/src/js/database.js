@@ -26,10 +26,12 @@ export const putDb = async (content) => {
   const confirm = await putInDB;
   console.log("Stored in Database!", confirm);
   // error log
-  console.error("putDb not implemented");
+  if (!databaseConnect) {
+    console.error("putDb not implemented");
+  }
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+// logic for a method that gets all the content from the database
 export const getDb = async () => {
   // connect to jate db
   const databaseConnect = await openDB("jate", 1);
@@ -43,7 +45,9 @@ export const getDb = async () => {
   const confirm = await readDB;
   console.log("Data Retrieved!", confirm);
   // error log
-  console.error("getDb not implemented");
+  if (!databaseConnect) {
+    console.error("getDb not implemented");
+  }
 };
 
 initdb();

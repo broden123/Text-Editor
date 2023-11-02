@@ -24,4 +24,5 @@ butInstall.addEventListener("click", async () => {
 // handle for after install
 window.addEventListener("appinstalled", (event) => {
   window.defferredprompt = null;
+  butInstall.classList.toggle("hidden", true);
 });
